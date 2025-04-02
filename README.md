@@ -1,7 +1,4 @@
 # my first !!
 
-- dfkjdf
-- dfkjkdjf
-- dfkdjf
-
+수정함!!
 
