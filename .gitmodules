@@ -1,1 +1,4 @@
 
+[submodule "cat-info"]
+	path = cat-info
+	url = https://github.com/mr8356/cat-info
