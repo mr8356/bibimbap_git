@@ -1,0 +1,45 @@
+<div class="header" th:fragment="bodyHeader">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">JoyProtein</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/protein">단백질 보충제</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/snacks">간식류</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/vitamin">비타민</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/amino">아미노산</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/chat">인공지능 챗봇</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <!-- memberId가 존재하는 경우에만 이 영역이 표시됩니다. -->
+                    <li class="nav-item" th:if="${session.memberId != null}">
+                        <a class="nav-link" href="/cart">장바구니</a>
+                    </li>
+                    <li class="nav-item" th:if="${session.memberId != null}">
+                        <a class="nav-link" href="/orders">주문현황</a>
+                    </li>
+                    <li class="nav-item" th:if="${session.memberId != null}">
+                        <a class="nav-link" href="/logout">로그아웃</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/members/new">회원 등록</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
